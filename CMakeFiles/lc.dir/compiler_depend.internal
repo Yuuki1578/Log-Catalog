@@ -3,6 +3,8 @@
 
 CMakeFiles/lc.dir/main.c.o
  /data/data/com.termux/files/home/dev/cc/LogCat/src/main.c
+ /data/data/com.termux/files/home/dev/cc/LogCat/src/include/error.h
+ /data/data/com.termux/files/home/dev/cc/LogCat/src/include/help.h
  /data/data/com.termux/files/usr/include/aarch64-linux-android/asm/bitsperlong.h
  /data/data/com.termux/files/usr/include/aarch64-linux-android/asm/fcntl.h
  /data/data/com.termux/files/usr/include/aarch64-linux-android/asm/posix_types.h
