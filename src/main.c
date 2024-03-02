@@ -3,8 +3,8 @@
 #include <string.h>
 
 // Local header
-#include "include/help.h"
 #include "include/error.h"
+#include "include/help.h"
 
 // Line colors
 #define COL "\e[1;36m"
@@ -86,42 +86,43 @@ int main(int argc, char **argv) {
     rename(ftmp_n, argv[1]);
   }
 
-  else if (argc == 3 && (argv[1] != NULL && argv[2] != NULL) && strcmp(argv[2], DEL) == 0) {
-      char buffer[BUFFMAX], ftmp_n[1024];
-      int delete_l, current_l;
-      FILE *fpath, *ftmp;
+  else if (argc == 3 && (argv[1] != NULL && argv[2] != NULL) &&
+           strcmp(argv[2], DEL) == 0) {
+    char buffer[BUFFMAX], ftmp_n[1024];
+    int delete_l, current_l;
+    FILE *fpath, *ftmp;
 
-      strcpy(ftmp_n, "temp.");
-      strcat(ftmp_n, argv[1]);
+    strcpy(ftmp_n, "temp.");
+    strcat(ftmp_n, argv[1]);
 
-      fpath = fopen(argv[1], "r");
-      ftmp = fopen(ftmp_n, "w");
+    fpath = fopen(argv[1], "r");
+    ftmp = fopen(ftmp_n, "w");
 
-      if (fpath == NULL || ftmp == NULL) {
-        // Error text if both, fpath and ftmp is a NULL pointer
-        return 1;
+    if (fpath == NULL || ftmp == NULL) {
+      // Error text if both, fpath and ftmp is a NULL pointer
+      return 1;
+    }
+
+    printf("Which line : ");
+    scanf("%i", &delete_l);
+
+    int ftmp_l = 1;
+    while (fgets(buffer, BUFFMAX, fpath)) {
+      if (ftmp_l != delete_l) {
+        fputs(buffer, ftmp);
+        ftmp_l++;
       }
 
-      printf("Which line : ");
-      scanf("%i", &delete_l);
-
-      int ftmp_l = 1;
-      while (fgets(buffer, BUFFMAX, fpath)) {
-        if (ftmp_l != delete_l) {
-          fputs(buffer, ftmp);
-          ftmp_l++;
-        }
-
-        else if (ftmp_l == delete_l) {
-          ftmp_l++;
-          continue;
-        }
+      else if (ftmp_l == delete_l) {
+        ftmp_l++;
+        continue;
       }
+    }
 
-      fclose(fpath);
-      fclose(ftmp);
+    fclose(fpath);
+    fclose(ftmp);
 
-      rename(ftmp_n, argv[1]);
+    rename(ftmp_n, argv[1]);
   }
 
   else {
