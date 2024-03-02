@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/data/data/com.termux/files/home/dev/cc/LogCat",
+  "command": "/data/data/com.termux/files/usr/bin/cc   -O2 -g -DNDEBUG -std=gnu17 -o CMakeFiles/lc.dir/main.c.o -c /data/data/com.termux/files/home/dev/cc/LogCat/src/main.c",
+  "file": "/data/data/com.termux/files/home/dev/cc/LogCat/src/main.c",
+  "output": "CMakeFiles/lc.dir/main.c.o"
+}
+]

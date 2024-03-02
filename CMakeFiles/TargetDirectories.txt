@@ -1,0 +1,3 @@
+/data/data/com.termux/files/home/dev/cc/LogCat/CMakeFiles/lc.dir
+/data/data/com.termux/files/home/dev/cc/LogCat/CMakeFiles/edit_cache.dir
+/data/data/com.termux/files/home/dev/cc/LogCat/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,1 @@
+/data/data/com.termux/files/usr/bin/cc -O2 -g -DNDEBUG CMakeFiles/lc.dir/main.c.o -o build/lc 
