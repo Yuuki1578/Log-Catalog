@@ -1,19 +1,27 @@
+// Standard library
 #include <stdio.h>
 #include <string.h>
 
+// Local header
+#include "include/help.h"
+#include "include/error.h"
+
+// Line colors
 #define COL "\e[1;36m"
 #define DEF "\e[0m"
+
+// User defined constants
 #define BUFFMAX 65535
 #define EDIT "-e"
 #define DEL "-d"
 #define ADD "-a"
 #define GET "-l"
 
+// Main function that take maximum 3 - 4 arguments
 int main(int argc, char **argv) {
 
   if (argc == 1) {
-    puts("You must either specify the file or mode you want use");
-    puts("Looking for help? type \'log --help\'");
+    // Error text if argc is only 1
     return 1;
   }
 
@@ -30,7 +38,7 @@ int main(int argc, char **argv) {
     }
 
     else {
-      perror("Error ");
+      // Error text if *file is a NULL pointer
       return 1;
     }
   }
@@ -49,7 +57,7 @@ int main(int argc, char **argv) {
     ftmp = fopen(ftmp_n, "w");
 
     if (fpath == NULL || ftmp == NULL) {
-      perror("Error ");
+      // Error text if both, fpath and ftmp is a NULL pointer
       return 1;
     }
 
@@ -90,7 +98,7 @@ int main(int argc, char **argv) {
       ftmp = fopen(ftmp_n, "w");
 
       if (fpath == NULL || ftmp == NULL) {
-        perror("Error ");
+        // Error text if both, fpath and ftmp is a NULL pointer
         return 1;
       }
 
@@ -117,7 +125,7 @@ int main(int argc, char **argv) {
   }
 
   else {
-    perror("Something went wrong here ");
+    // Error text for return 1 (SIGKILL) error code 1
     return 1;
   }
 

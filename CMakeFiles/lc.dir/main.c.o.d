@@ -33,4 +33,6 @@ CMakeFiles/lc.dir/main.c.o: \
   /data/data/com.termux/files/usr/include/asm-generic/fcntl.h \
   /data/data/com.termux/files/usr/include/bits/flock64.h \
   /data/data/com.termux/files/usr/include/bits/flock.h \
-  /data/data/com.termux/files/usr/include/bits/seek_constants.h
+  /data/data/com.termux/files/usr/include/bits/seek_constants.h \
+  /data/data/com.termux/files/home/dev/cc/LogCat/src/include/help.h \
+  /data/data/com.termux/files/home/dev/cc/LogCat/src/include/error.h
